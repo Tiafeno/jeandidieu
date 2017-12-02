@@ -21,8 +21,8 @@ Visit https://www.falicrea.com to know our current or former work.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/uikit.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Zilla+Slab:400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.mousewheel.js"></script>
   <script src="assets/js/bluebird.min.js"></script>
@@ -41,8 +41,6 @@ Visit https://www.falicrea.com to know our current or former work.
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
     }
-
-    header nav {}
 
     .h-text {
       font-family: "Zilla Slab", "Open Sans", X-LocaleSpecific, sans-serif;
@@ -70,7 +68,7 @@ Visit https://www.falicrea.com to know our current or former work.
       position: relative;
     }
 
-    #group-container {
+    .group-container {
       position: relative;
       display: block;
       height: 100%;
@@ -83,7 +81,6 @@ Visit https://www.falicrea.com to know our current or former work.
     .paragraphs-items {
       width: inherit;
       position: relative;
-      float: left;
       height: 100%;
     }
 
@@ -95,26 +92,98 @@ Visit https://www.falicrea.com to know our current or former work.
     .first-items {
       background: url(img/bg.jpg);
       width: 47em;
-      
     }
-    .second-items{
+
+    .second-items {
       width: 24em;
       background: url(img/green.jpg);
+      display: flex;
+    }
+
+    .third-items {
+      width: 45em;
+      box-shadow: 2px 0px 10px #000;
+      background-image: url(img/beige.jpg);
+    }
+
+    .third-items .paragraphs-title {
+      font-family: "Satisfy", Verdana, Arial, sans-serif;
+      color: #430000;
+      margin-top: 10px;
+      margin-bottom: 2px;
+      font-size: 2.2rem;
+    }
+
+    .sixth-items {
+      width: 60em;
+      background-image: url(img/chalkboard.jpg);
+    }
+    .fifth-items {
+      width: 25em;
+      background-image: url(img/turqoise.jpg);
+    }
+    .fifth-items .paragraphs-title {
+      font-family: Yanone Kaffeesatz, Verdana, Arial, sans-serif;
+      color: #ffffff;
+      text-align: center;
+      font-size: 37px;
+    }
+    .top-underline::before {
+      margin-bottom: 22px !important;
+      -moz-transform: rotate(5deg) skew(5deg, 0);
+      -ms-transform: rotate(5deg) skew(5deg, 0);
+      -webkit-transform: rotate(5deg) skew(5deg, 0);
+      transform: rotate(5deg) skew(5deg, 0);
+    }
+
+    .fourth-items {
+      width: 28em;
+      background-image: url(img/vanillier.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .paragraphs-content .container {
+      font-family: Yanone Kaffeesatz, Verdana, Arial, sans-serif;
+      color: #430000;
+      margin-bottom: 0px;
+      font-size: 1.2rem;
+    }
+
+    .paragraphs-content .container p:not(.not),
+    .paragraphs-content .container li, 
+    .paragraphs-content .container a{
+      color: #ffffff;
+      font-size: 16px;
+      letter-spacing: 1.3px;
+    }
+
+    .paragraphs-content {
+      margin: auto;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
     .zone-inner h1 {
       margin-top: 30px;
     }
-    .zone-inner h1::after {
+
+    .zone-inner h1::after,
+    .text-underline::after,
+    .top-underline::before {
       content: '';
       display: block;
       width: 102px;
-      height: 2px;
+      height: 4px;
       margin: auto;
       margin-top: auto;
-      background: aliceblue;
+      margin-top: auto;
+      background-image: url(img/border-white.svg);
       margin-top: 22px;
+      background-position: top left;
+      background-repeat: no-repeat;
     }
+
     .zone-inner {
       padding: 10px;
       background: rgba(67, 0, 0, 0.502);
@@ -122,10 +191,18 @@ Visit https://www.falicrea.com to know our current or former work.
     }
 
     .text-rotate {
-      -moz-transform: rotate(-5deg) skew(-5deg,0);
-      -ms-transform: rotate(-5deg) skew(-5deg,0);
-      -webkit-transform: rotate(-5deg) skew(-5deg,0);
-      transform: rotate(-5deg) skew(-5deg,0);
+      -moz-transform: rotate(-5deg) skew(-5deg, 0);
+      -ms-transform: rotate(-5deg) skew(-5deg, 0);
+      -webkit-transform: rotate(-5deg) skew(-5deg, 0);
+      transform: rotate(-5deg) skew(-5deg, 0);
+    }
+
+    .fourth-items .zone-inner p, 
+    .fourth-items .zone-inner li,
+    .fourth-items .zone-inner a,
+    .fourth-items .zone-inner span {
+      color: #ffffff;
+      font-size: 16px;
     }
 
     .zone-inner .zone-inner-title {
@@ -138,13 +215,32 @@ Visit https://www.falicrea.com to know our current or former work.
       font-size: 31px;
     }
 
-    .zone-inner .zone-inner-content, .p-content {
+    .zone-inner .zone-inner-content,
+    .p-content {
       font-family: 'Yanone Kaffeesatz', sans-serif;
       color: rgb(255, 252, 252);
       font-size: 19px;
       line-height: 1.4;
       letter-spacing: 0.7px;
     }
+    .product p {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      color: #430000;
+    }
+    .product img {
+      display: block;
+      border-left: 8px solid #d71358;
+    }
+    .product .product-title {
+      margin-top: 5px;
+      text-align: left;
+      font-size: 21px;
+      text-transform: uppercase;
+    }
+    .product .product-title > span {
+      border-bottom: 1px dotted;
+    }
+
     .p-content {
       font-family: 'Satisfy', cursive;
       font-size: 25px;
@@ -153,7 +249,7 @@ Visit https://www.falicrea.com to know our current or former work.
 
 </head>
 
-<body style="width:4500px">
+<body>
   <header id="site-header">
     <div class="menu-bar uk-navbar-transparent">
       <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
@@ -168,7 +264,8 @@ Visit https://www.falicrea.com to know our current or former work.
               <h3>Title</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
+                consequat.
+              </p>
             </div>
           </div>
         </div>
@@ -177,8 +274,8 @@ Visit https://www.falicrea.com to know our current or former work.
   </header>
   <main id="container" class="uk-section-transparent uk-padding-remove">
     <div id="scroll-container">
-      <div id="group-container">
-        <div class="paragraphs-items uk-clearfix items-bg first-items">
+      <div class="group-container uk-clearfix">
+        <div class="paragraphs-items uk-float-left uk-clearfix items-bg first-items">
           <div class="uk-child-width-expand@s" uk-grid>
             <div class="uk-grid-item-match"></div>
             <div>
@@ -194,19 +291,100 @@ Visit https://www.falicrea.com to know our current or former work.
             </div>
           </div>
         </div>
-        <div class="paragraphs-items uk-clearfix items-bg second-items">
-          <div>
-              <div class="uk-child-width-expand@s uk-margin-remove" uk-grid>
-                <div class="uk-width-1-1 uk-padding-remove">
-                  <div style="width: 75%; margin: auto">
-                      <p class="p-content text-rotate">Personalize your experience : which segment are you interested in ...</p>
-                  </div>
+        <div class="paragraphs-items uk-float-left uk-clearfix items-bg second-items">
+          <div class="paragraphs-content">
+            <div class="uk-child-width-expand@s uk-margin-remove" uk-grid>
+              <div class="uk-width-1-1 uk-padding-remove">
+                <div style="margin: auto">
+                  <p class="p-content text-underline text-rotate">Véritable Vanille de Madagascar directement importée de la region de Sambava</p>
                 </div>
               </div>
+            </div>
           </div>
         </div>
-        <div class="paragraphs-items uk-clearfix">khjkhjkjkljkl</div>
-        <div class="paragraphs-items uk-clearfix">poopopoo</div>
+        <div class="paragraphs-items uk-float-left uk-clearfix item-bg third-items">
+          <div class="paragraphs-content">
+            <h3 class="paragraphs-title text-rotate">Produit</h3>
+            <div class="container">
+
+              <div class="uk-child-width-expand product" uk-grid>
+                <div class="uk-grid-item-match">
+                  <div class="image"><img class="uk-border-rounded" src="img/products/vanille-bourbon.jpg" width="300"  alt="Border rounded"></div>
+                  <p class="product-title not"><span>Vanille</span></p>
+                </div>
+                <div class="uk-grid-item-match uk-padding-remove">
+                  <p class="uk-margin-auto-vertical" style="font-size: 17px; color: #430000">Nous avons développé une politique offrant toutes les garanties pour un management rigoureux de la qualité, 
+                      dédiés à la production, la transformation ou conditionnement de la vanille.</p>
+                </div>
+
+              </div>
+
+              <h3 class="paragraphs-title">Autres produits</h3>
+              <div class="uk-child-width-expand product" uk-grid>
+                <div class="uk-width-1-3">
+                  <div class="image"><img class="uk-border-rounded" src="img/products/girofle.jpg" width="200"  alt="Border rounded"></div>
+                  <p class="product-title not"><span>Girofle</span></p>
+                  <p class="product-desc"></p>
+                </div>
+
+                <div class="uk-width-1-3">
+                  <div class="image">
+                      <img class="uk-border-rounded" src="img/products/cafe.jpg" width="200"  alt="Border rounded">
+                  </div>
+                  <p class="product-title not"><span>Café</span></p>
+                  <p class="product-desc"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="paragraphs-items uk-float-left uk-clearfix item-bg fourth-items">
+            <div class="paragraphs-content">
+              <div class="container">
+                  <div class="uk-child-width-expand@s" uk-grid>
+                      <div class="uk-grid-item-match">
+                        <div class="zone-inner">
+                          <h1>
+                            <div class="zone-inner-title text-rotate">PROCHE DE NOS PARTENAIRES</div>
+                          </h1>
+                          <p class="zone-inner-content">
+                              Pour garantir à nos clients une qualité optimale, dans des conditions respectueuses de l’éthique, nous nous assurons que les techniques de 
+                              production de nos fournisseurs sont raisonnées :
+                              <ul>
+                                <li>Cueillette de la vanille uniquement a Maturité</li>
+                                <li>Relation directe avec les producteurs</li>
+                                <li>Relation étroite avec les collecteurs</li>
+                                <li>Formation</li>
+                                <li>Mise en place d’une traçabilité allant de la plantation au conditionnement Des visites régulières nous permettent 
+                              de maintenir des relations étroites et une parfaite connaissance du terrain</li>
+                              </ul>
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+        <div class="paragraphs-items uk-float-left uk-clearfix item-bg fifth-items">
+          <div class="paragraphs-content">
+            <h3 class="paragraphs-title top-underline text-rotate">DEMANDE / DEVIS</h3>
+            <div class="container">
+              <p>
+                  Nous sommes déterminés à vous offrir
+                  des produits et de service de la qualité.
+                  
+                  Nous croyons que la qualité est notre meilleur argument
+                  pour travailler avec vous.
+                  </p>
+              <form>
+
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="paragraphs-items uk-float-left uk-clearfix item-bg sixth-items">
+
+        </div>
       </div>
 
     </div>
