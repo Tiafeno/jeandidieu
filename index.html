@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Société Jean Didieu</title>
+  <meta charset="utf-8">
+  <!--
+                                                          
+                                                      
+`7MM"""YMM `7MMF'`7MN.   `7MF'`7MM"""YMM  `7MMF'      
+  MM    `7   MM    MMN.    M    MM    `7    MM        
+  MM   d     MM    M YMb   M    MM   d      MM        
+  MM""MM     MM    M  `MN. M    MMmmMM      MM        
+  MM   Y     MM    M   `MM.M    MM   Y  ,   MM      , 
+  MM         MM    M     YMM    MM     ,M   MM     ,M 
+.JMML.     .JMML..JML.    YM  .JMMmmmmMMM .JMMmmmmMMM 
+                                                      
+Hi there, nice to meet you!
+Visit https://www.falicrea.com to know our current or former work.
+-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/uikit.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Zilla+Slab:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet"> 
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.mousewheel.js"></script>
+  <script src="assets/js/bluebird.min.js"></script>
+  <script src="assets/js/uikit.min.js"></script>
+  <script src="assets/js/uikit-icons.min.js"></script>
+  <script src="assets/js/jeandidieu.js"></script>
+  <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <style type="text/css">
+    html {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .uk-navbar-nav>li>a {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+    }
+
+    header nav {}
+
+    .h-text {
+      font-family: "Zilla Slab", "Open Sans", X-LocaleSpecific, sans-serif;
+    }
+
+    #section-first {
+      background: linear-gradient(to right, #8af084 0, #dce792 100%);
+    }
+
+    header#site-header {
+      position: fixed;
+      z-index: 99;
+    }
+
+    #scroll-container {
+      display: block;
+      position: relative;
+    }
+
+    #scroll-container .group-content>* {
+      float: left;
+    }
+
+    #container {
+      position: relative;
+    }
+
+    #group-container {
+      position: relative;
+      display: block;
+      height: 100%;
+    }
+
+    .paragraphs-items>* {
+      padding-top: 4.5em;
+    }
+
+    .paragraphs-items {
+      width: inherit;
+      position: relative;
+      float: left;
+      height: 100%;
+    }
+
+    .items-bg {
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+    }
+
+    .first-items {
+      background: url(img/bg.jpg);
+      width: 47em;
+      
+    }
+    .second-items{
+      width: 24em;
+      background: url(img/green.jpg);
+    }
+
+    .zone-inner h1 {
+      margin-top: 30px;
+    }
+    .zone-inner h1::after {
+      content: '';
+      display: block;
+      width: 102px;
+      height: 2px;
+      margin: auto;
+      margin-top: auto;
+      background: aliceblue;
+      margin-top: 22px;
+    }
+    .zone-inner {
+      padding: 10px;
+      background: rgba(67, 0, 0, 0.502);
+      margin-right: 34px;
+    }
+
+    .text-rotate {
+      -moz-transform: rotate(-5deg) skew(-5deg,0);
+      -ms-transform: rotate(-5deg) skew(-5deg,0);
+      -webkit-transform: rotate(-5deg) skew(-5deg,0);
+      transform: rotate(-5deg) skew(-5deg,0);
+    }
+
+    .zone-inner .zone-inner-title {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      color: rgb(255, 255, 255);
+      font-weight: 400;
+      line-height: 1.16;
+      font-size: 31px;
+    }
+
+    .zone-inner .zone-inner-content, .p-content {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      color: rgb(255, 252, 252);
+      font-size: 19px;
+      line-height: 1.4;
+      letter-spacing: 0.7px;
+    }
+    .p-content {
+      font-family: 'Satisfy', cursive;
+      font-size: 25px;
+    }
+  </style>
+
+</head>
+
+<body style="width:4500px">
+  <header id="site-header">
+    <div class="menu-bar uk-navbar-transparent">
+      <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="#">
+            <img src="img/logo.png" alt="logo Jean Didieu" width="215px" />
+          </a>
+          <a title="Menu" href="" uk-toggle="target: #offcanvas-reveal" class="uk-icon-button" uk-icon="icon: menu"> </a>
+          <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+            <div class="uk-offcanvas-bar">
+              <button class="uk-offcanvas-close" type="button" uk-close></button>
+              <h3>Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="container" class="uk-section-transparent uk-padding-remove">
+    <div id="scroll-container">
+      <div id="group-container">
+        <div class="paragraphs-items uk-clearfix items-bg first-items">
+          <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-grid-item-match"></div>
+            <div>
+              <div class="zone-inner">
+                <h1>
+                  <div class="zone-inner-title text-rotate">Qui sommes nous ?</div>
+                </h1>
+                <p class="zone-inner-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="paragraphs-items uk-clearfix items-bg second-items">
+          <div>
+              <div class="uk-child-width-expand@s uk-margin-remove" uk-grid>
+                <div class="uk-width-1-1 uk-padding-remove">
+                  <div style="width: 75%; margin: auto">
+                      <p class="p-content text-rotate">Personalize your experience : which segment are you interested in ...</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="paragraphs-items uk-clearfix">khjkhjkjkljkl</div>
+        <div class="paragraphs-items uk-clearfix">poopopoo</div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
