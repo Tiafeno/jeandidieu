@@ -4,10 +4,15 @@
     var windowWidth = 0;
     var container = $("main#container, #scroll-container");
     var group = $('.group-container');
+
     $("html").mousewheel(function (event, delta) {
       this.scrollLeft -= (delta * 30);
       event.preventDefault();
     });
+
+    $("#formCommand").submit(function() {
+      return false;
+    })
 
     /** set exactelly body width */
     var paragraphs = group.find('.paragraphs-items');
@@ -43,4 +48,5 @@
     }
     
   });
+  
 })(jQuery)

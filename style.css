@@ -1,0 +1,261 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+p, a, li, span {
+  font-size: 14px;
+  letter-spacing: .9px;
+  font-weight: lighter;
+}
+
+.uk-navbar-nav>li>a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.h-text {
+  font-family: "Zilla Slab", "Open Sans", X-LocaleSpecific, sans-serif;
+}
+
+#section-first {
+  background: linear-gradient(to right, #8af084 0, #dce792 100%);
+}
+
+header#site-header {
+  position: fixed;
+  z-index: 99;
+}
+
+#scroll-container {
+  display: block;
+  position: relative;
+}
+
+#scroll-container .group-content>* {
+  float: left;
+}
+
+#container {
+  position: relative;
+}
+
+.group-container {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.paragraphs-items>* {
+  padding-top: 4.5em;
+}
+
+.paragraphs-items {
+  width: inherit;
+  position: relative;
+  height: 100%;
+}
+
+.items-bg {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.first-items {
+  background: url(img/bg.jpg);
+  width: 47em;
+}
+
+.second-items {
+  width: 24em;
+  background: url(img/green.jpg);
+  display: flex;
+}
+
+.third-items {
+  width: 45em;
+  box-shadow: 2px 0px 10px #000;
+  background-image: url(img/beige.jpg);
+}
+
+.third-items .paragraphs-title {
+  font-family: "Satisfy", Verdana, Arial, sans-serif;
+  color: #430000;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 2.2rem;
+}
+
+.sixth-items {
+  width: 60em;
+}
+.sixth-items .uk-icon-button {
+  color: #000000 !important;
+}
+
+
+.fifth-items {
+  width: 25em;
+  background-image: url(img/turqoise.jpg);
+}
+.fifth-items .paragraphs-title {
+  font-family: Yanone Kaffeesatz, Verdana, Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 37px;
+}
+
+
+.top-underline::before {
+  margin-bottom: 22px !important;
+  -moz-transform: rotate(5deg) skew(5deg, 0);
+  -ms-transform: rotate(5deg) skew(5deg, 0);
+  -webkit-transform: rotate(5deg) skew(5deg, 0);
+  transform: rotate(5deg) skew(5deg, 0);
+}
+
+.fourth-items {
+  width: 28em;
+  background-image: url(img/vanillier.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.paragraphs-content .container {
+  color: #430000;
+  margin-bottom: 0px;
+}
+
+.paragraphs-content .container p:not(.not),
+.paragraphs-content .container li, 
+.paragraphs-content .container a{
+  color: #ffffff;
+}
+
+.paragraphs-content {
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.zone-inner h1 {
+  
+}
+
+.zone-inner h1::after,
+.text-underline::after,
+.top-underline::before {
+  content: '';
+  display: block;
+  width: 102px;
+  height: 4px;
+  margin: auto;
+  margin-top: auto;
+  margin-top: auto;
+  background-image: url(img/border-white.svg);
+  margin-top: 22px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.zone-inner {
+  padding: 10px;
+  background: rgba(67, 0, 0, 0.502);
+  padding-top: 40px;
+}
+
+.text-rotate {
+  -moz-transform: rotate(-5deg) skew(-5deg, 0);
+  -ms-transform: rotate(-5deg) skew(-5deg, 0);
+  -webkit-transform: rotate(-5deg) skew(-5deg, 0);
+  transform: rotate(-5deg) skew(-5deg, 0);
+}
+
+.fourth-items .zone-inner p, 
+.fourth-items .zone-inner li,
+.fourth-items .zone-inner a,
+.fourth-items .zone-inner span {
+  color: #ffffff;
+}
+
+.zone-inner .zone-inner-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  line-height: 1.16;
+  font-size: 31px;
+}
+
+.zone-inner .zone-inner-content,
+.p-content {
+  color: rgb(255, 252, 252);
+}
+.products p, .products h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #430000;
+}
+.products img {
+  display: block;
+}
+.products .product-title {
+  margin-top: 5px;
+  text-align: left;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+.products .product-title::after {
+  content: '';
+  display: block;
+  height: 1.5px;
+  width: 40%;
+  margin: auto;
+  background: #430000;
+  transform: rotate(5deg) skew(5deg, 0);
+  margin-top: 20px;
+}
+.products .product-title > span {
+  border-bottom: 1px dotted;
+}
+.products .product .product-container {
+  background-color: white; 
+  padding-top: 40px; 
+  padding-left: 28px; 
+  padding-right: 28px; 
+  position: relative
+}
+
+.p-content {
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
+}
+
+.fifth-items .uk-button {
+  color: white;
+}
+.fifth-items .uk-button:hover {
+  background: #232A61;
+  border: none;
+}
+
+.footer {
+  font-size: 13px;
+  text-align: center;
+}
+.footer p {
+  color: rgb(39, 39, 39) !important;
+  font-size: 13px;
+  margin: 0;
+}
+p.copyright {
+  margin-top: 16px;
+}
+span.uk-icon.product-favorite {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  background: red;
+  border-radius: 25px;
+  padding: 5px;
+  color: aliceblue;
+}
