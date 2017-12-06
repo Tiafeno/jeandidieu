@@ -12,7 +12,13 @@
 
     $("#formCommand").submit(function() {
       return false;
-    })
+    });
+
+    $('.lightbox-directive').click(function() {
+      var idGallerie = $(this).data('ref');
+      var galleries = $("#" + idGallerie).find(".product-image-link");
+      $(galleries[0]).trigger("click");
+    });
 
     /** set exactelly body width */
     var paragraphs = group.find('.paragraphs-items');
@@ -20,7 +26,8 @@
       var currentWidth = $( this ).width();
       windowWidth += parseFloat(currentWidth);
       posWindow(); 
-    })
+    });
+
     positionHeight()
       .then(function successCallback(height) {
         container.css({height: height + "px", visibility: 'visible'});

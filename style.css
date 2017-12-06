@@ -198,6 +198,10 @@ header#site-header {
 .products img {
   display: block;
 }
+.products .product-gallery {
+  margin-bottom: 15px;
+}
+
 .products .product-title {
   margin-top: 5px;
   text-align: left;
@@ -258,4 +262,13 @@ span.uk-icon.product-favorite {
   border-radius: 25px;
   padding: 5px;
   color: aliceblue;
+}
+
+.uk-button-jd {
+  background-color: #f5cc59;
+  color: #430000;
+}
+.uk-button-jd:hover, .uk-button-jd:focus {
+  background-color: #232A61;
+  color: #fff;
 }
