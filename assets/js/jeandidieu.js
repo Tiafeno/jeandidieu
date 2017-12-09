@@ -5,7 +5,7 @@
     var container = $("main#container, #scroll-container");
     var group = $('.group-container');
 
-    $("html").mousewheel(function (event, delta) {
+    $("html, body").mousewheel(function (event, delta) {
       this.scrollLeft -= (delta * 30);
       event.preventDefault();
     });
