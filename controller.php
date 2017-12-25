@@ -11,9 +11,9 @@ class Controller {
   public $mail;
   public $recipient;
   public $sender;
-  public $engine;
+  public $templateEngine;
   public function __construct() {
-    $this->engine = new Engine();
+    $this->templateEngine = new Engine();
   }
 
   protected function getBodyHtml() {
@@ -22,18 +22,21 @@ class Controller {
 
   public function sendMail() {
     $this->mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-    $this->recipient = "francisco_28@ymail.com";
+    $this->recipient = ["francisco_28@ymail.com"];
     $this->sender = Request::getValue('sender');
     $this->sender = (false == $this->sender) ? "no-reply@falicrea.com" : $this->sender;
     try {
       //Recipients
       $this->mail->setFrom($this->sender, 'Demandeur');
-      $this->mail->addAddress($this->recipient);     // Add a recipient
+      for ($ctp = 0; $ctp < count($this->recipient); $ctp++)
+        $this->mail->addAddress($this->recipient[ $cpt ]);     // Add a recipient
 
+      $this->templateEngine->assign('email', $this->sender);
       $this->mail->isHTML(true);                                  // Set email format to HTML
-      $this->mail->Subject = 'Demande de contact';
-      $this->mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-      $this->mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+      $this->mail->Subject = 'Demande de contact - Jean Didieu';
+      $this->mail->Body    = $this->templateEngine->fetch('mail.tpl');
+      $this->mail->AltBody = "Je vous remercie d'envoyer votre proposition de tarif à l'adresse indiquée en en-tête ou à 
+      l'adresse électronique suivante : {$this->sender}";
   
       $this->mail->send();
       echo json_encode(["success" => true, "message" => 'Message has been sent']);
@@ -47,7 +50,11 @@ class Controller {
 $reflexionController = new ReflectionClass( 'Controller' );
 if ($reflexionController->hasMethod( Request::getValue( 'method' ) )) {
   $method = $reflexionController->getMethod( Request::getValue( 'method' ) );
-  return $method->invoke( new Controller() );
+  try {
+    $method->invoke( new Controller() );
+  } catch(Exception $e) {
+    echo json_encode(['success' => false, "message" => $e->getMessage()]);
+  }
 } else {
   echo json_encode([ 'success' => false, 'message' => "Methode doesn't existe"]);
 }
