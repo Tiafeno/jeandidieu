@@ -11,6 +11,18 @@
     });
 
     $("#formCommand").submit(function() {
+      $.get("controller.php", {
+        method: "sendMail"
+      }, function(data, status, jqXHR) { 
+        if (data.success) {
+          $('input[type=mail]').val('');
+          alert(data.message);
+        }
+      }, "json")
+      .fail(function( error ) {
+        console.warn( error );
+      });
+
       return false;
     });
 
