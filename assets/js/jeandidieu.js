@@ -16,10 +16,11 @@
         method: "sendMail",
         sender: window.btoa(mail)
       })
-      .done(function(data, status, jqXHR) { 
-        if (data.success) {
+      .done(function(data, status, jqXHR) {
+        var response = JSON.parse(data);
+        if (response.success) {
           $('input[type=mail]').val('');
-          alert(data.message);
+          alert(response.message);
         }
       }, "json")
       .fail(function( error ) {

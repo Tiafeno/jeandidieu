@@ -22,7 +22,7 @@ class Controller {
 
   public function sendMail() {
     $this->mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-    $this->recipients = ["tiafenofnel@gmail.com"]; //francisco_28@ymail.com, contact@societe-jeandidieu.com
+    $this->recipients = ["tiafenofnel@gmail.com", "francisco_28@ymail.com", "contact@societe-jeandidieu.com"]; 
     $this->sender = base64_decode(Request::getValue('sender'));
     $this->sender = (false == $this->sender) ? "no-reply@falicrea.com" : $this->sender;
     //Recipients
