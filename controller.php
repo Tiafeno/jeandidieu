@@ -1,9 +1,12 @@
 <?php
+
+define("EXEC", true)
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 //Load composer's autoloader
 require 'vendor/autoload.php';
+
 require 'engine.php';
 require_once('inc/services.request.php');
 
