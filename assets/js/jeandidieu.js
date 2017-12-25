@@ -11,9 +11,12 @@
     });
 
     $("#formCommand").submit(function() {
+      var mail = $('input[type=mail]').val().trim();
       $.get("controller.php", {
-        method: "sendMail"
-      }, function(data, status, jqXHR) { 
+        method: "sendMail",
+        sender: window.btoa(mail)
+      })
+      .done(function(data, status, jqXHR) { 
         if (data.success) {
           $('input[type=mail]').val('');
           alert(data.message);

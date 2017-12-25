@@ -166,9 +166,9 @@
                       align=left> 
                       <p>Madame, Monsieur,</p>
                       <br />
-                      <p>Je souhaiterais connaître vos tarifs dans ce domaine.</p>
+                      <p>Je souhaiterais connaître vos tarifs.</p>
                       <p>Je vous remercie d'envoyer votre proposition de tarif à l'adresse indiquée en en-tête ou à 
-                        l'adresse électronique suivante : <b>{ $email }</b>.</p>
+                        l'adresse électronique suivante : <b>{$email}</b>.</p>
                       <p>Veuillez recevoir, Madame, Monsieur, l'assurance de mes salutations les plus cordiales.</p>
                     </P>
                     </div>

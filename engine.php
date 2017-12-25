@@ -1,4 +1,5 @@
 <?php
+
 require_once('libs/smarty/Smarty.class.php');
 class Engine extends Smarty {
   public function __construct() {
