@@ -1,6 +1,7 @@
 <?php
 
-define("EXEC", true)
+define("EXEC", true);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -17,10 +18,6 @@ class Controller {
   public $templateEngine;
   public function __construct() {
     $this->templateEngine = new Engine();
-  }
-
-  protected function getBodyHtml() {
-    
   }
 
   public function sendMail() {
